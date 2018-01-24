@@ -61,7 +61,7 @@ console.log(typeof unBooleen);
 // -- Les Constantes
 
 /*
-La déclaration CONST permet de créer une constnte accessible uniquement en lecture.
+La déclaration CONST permet de créer une constante accessible uniquement en lecture.
 Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures.
 Une constante ne peut pas être déclarée à nouveau.
 Généralement, par convention, les constantes sont en Majuscule.
