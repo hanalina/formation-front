@@ -122,9 +122,11 @@ Lors de la saisie du Pseudo, vous devrez afficher en temps réel dans le titre i
             }
         });  
 
+        //
+
         // ETAPE 2
 
-        age.addEventListener("change", function(){
+        /*age.addEventListener("change", function(){
             if (let age = 0; age < 18; age++){
                 ageError.style.display = "none";
                 submit.disabled = false ;
@@ -141,10 +143,60 @@ Lors de la saisie du Pseudo, vous devrez afficher en temps réel dans le titre i
             return = true;
         }   else {
             alert ("ageError");
-        }
+        }*/
              
         
+        // ETAPE 2
+        age.addEventListener('change', function(){
+            if(age.value<18){
+                ageError.style.display = "block";
+                submit.disabled = true;
+            }else{
+                ageError.style.display = "none";
+                submit.disabled = false;
+            }
+        });
+
+        // ETAPE 4A // quand on traitre un formulaire faut ecouter submt du form, onj recup l'evet et on l'arrete avec eventdefault pout stoppper la redirection html/http
+        InscriptionForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            // maintenant on creer/declarer un objet membre à ajouter au tableau
+            let membre = { // mb est un tableau et pas une variable
+                pseudo: pseudo.value,
+                age: age.value,
+                email : email.value,
+                mdp : mdp.value
+            };
+            //console.log(membre);
+            membres.push(membre);
+            console.log(membres);
+
+            membres.push(membre);
+            console.log(membres);
+
+            var p = document.createElement('p');
+            p.innerHTML = "Merci " + pseudo.value + "! <strong>Tu es maintenant inscrit.</strong><br><br><u>Voici la liste de nos membres :</u>";
+            document.body.appendChild(p);
+
         
+       
+            
+            
+            
+            // Generer la liste des membres
+            var ul = document.createElement('ul');
+            for(let i = 0 ; i< membres.length ; i++){
+
+                let li = document.createElement('li');
+                let liste = membres[i].pseudo+":"+membres[i].age+"ans";
+                li.textContent = liste;
+                ul.appendChild(li);
+            }
+
+            // affiche dans la page
+            document.body.appendChild(ul)
+
+        });
 
 
     </script>
