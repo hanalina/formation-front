@@ -25,7 +25,7 @@ $(() => {
     alert('Bienvenue dans ce cours jQuery !');
 
 
-// en JS pour faire la eme chose, methode :
+// en JS pour faire la meme chose, methode :
 document.getElementById("TexteEnJquery").innerHTML  = <strong>Mon texte en JS</strong>;
 // en JQ:
 // en jQuery, les selecteurs sont les memes qu'en CSS

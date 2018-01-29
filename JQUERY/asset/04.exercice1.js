@@ -24,4 +24,32 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
+    //CORRECTION
+    <script>
+        <!--detecter a quel moment l'ut va soumettre son formulaire donc on le cible ( le formulaire) -->
+        // $('#MonFormulaire').submit(function(){}) autre posssibilité de "formule"
+        $("#MonFormulaire").on("submit",function(e){
+            // -- cette fonction anonyme sera executee à la soumission du formulaire
+
+            // permet d'annyuler l'action par defaut du submit (la redirection HTML)
+            e.preventDefault(); // e correspond à l'evenement de la fonction anonyme
+            console.log($(this));
+            
+            // version courte
+            //$(this).replaceWith("<p>Bonjour"+$('nom complet').val()+" !</p>");
+
+            //version longue
+            $("MonFormulaire").hide();
+            $('<p>').append('Bonjour'.$('#nomcomplet').val()+'!').appendTo($('body'));  
+            // creation de l'evenement p, append c'est pour mettre à l'int du paragraphe le texte et apprendto c'est pour tout placer dans le body
+            $('<p>Bonjour'+$('#nomcomplet').val()+'!</p>').appendTo('body'); // autre formule possible
+
+            
+
+
+        });
+    </script>    
+
+
 </body>
+</html>
