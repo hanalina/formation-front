@@ -17,3 +17,63 @@ CONSIGNE :
     
     
 */ regets POUR LA CASSE 5 VALEUR i
+
+
+$(function(){
+
+    $.ajax('https://jsonplaceholder.typicode.com/users')
+    .done (function(username)
+    for ())
+
+    $.each(email, name, username, phone)
+
+    // OU - utilisation de regExp
+
+    $('#username').on('submit', function(e){
+        e.preventDefault();
+
+        $('#username .has error').removeClass('has error');
+        $('#username . alert danger').remove();
+
+        let email = $('#email');
+        let name = $('#name');
+        let username = $('#username');
+        let phone = $('#phone')
+   
+
+        if (email.val().length === 0){
+            email.parent().addClass('has error');
+            $('<p class='has error'>saisissez votre email</p>').appendTo(email.parent());
+
+        }else{
+            email.parent().addClass('has success');
+
+        }
+
+        if (name.val().length === 0){
+            name.parent().addClass('has error');
+            $('<p class='has error'>saisissez votre nom</p>').appendTo(name.parent());
+
+        }else{
+            name.parent().addClass('has success');
+            
+        }
+
+
+        if (username.val().length === 0){
+            username.parent().addClass('has error');
+            $('<p class='has error'>saisissez votre pseudo</p>').appendTo(username.parent());
+
+        }else{
+            username.parent().addClass('has success');
+            
+        }
+
+    })
+})
+
+console.log(username);
+
+
+
+// ou faut utiliser input ?
