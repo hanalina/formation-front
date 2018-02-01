@@ -1,0 +1,85 @@
+.container {
+ text-align: center;
+}
+
+.row{
+    display: inline-block;
+}
+
+body{
+    
+    background-color: black;
+
+}
+
+.imageFond2{
+    background-color: white;
+    padding-left: 90px;
+    
+}
+
+.imageFond{
+    height: 400px;
+    width: 100%;
+    padding-left: 140px;
+}
+
+nav{
+    margin: auto;
+}
+
+.form-row{
+    padding-top: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+#message {
+    height: 120px;
+    width: 50%;
+    margin: auto;
+}
+
+#sujet{
+    width: 50%;
+    margin: auto;
+}
+
+h2{
+    margin: auto;
+    padding-top: 60px;
+    color: white;
+    text-align: center;
+
+}
+
+#email{
+    height: 50px;
+}
+
+#tel{
+    height:50px;
+}
+
+
+.image{
+    padding-top: 80px;
+    padding: 50px;
+}
+
+p{
+    color: white;
+}
+
+#nom{
+    color: white;
+}
+
+.phone{
+    padding: 30px;
+    margin: auto;
+}
+
+.texte1{
+    text-align: center;
+}
